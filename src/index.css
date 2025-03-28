@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.xterm {
+  padding: 10px;
+  height: 100%;
+}
+
+.xterm-viewport {
+  overflow-y: auto;
+}
+
+/* Dark mode styles */
+.dark {
+  @apply bg-gray-900;
+}
+
+.dark .sp-wrapper {
+  @apply bg-gray-800 text-white;
+}
+
+.dark .sp-tab-button {
+  @apply text-gray-300 hover:text-white;
+}
+
+.dark .sp-tab-button[data-active='true'] {
+  @apply bg-gray-700 text-white;
+}
+
+/* Light mode styles */
+.light .sp-wrapper {
+  @apply bg-white;
+}
+
+.light .sp-tab-button {
+  @apply text-gray-700 hover:text-gray-900;
+}
+
+.light .sp-tab-button[data-active='true'] {
+  @apply bg-gray-100 text-gray-900;
+}
